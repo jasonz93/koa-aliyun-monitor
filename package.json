@@ -1,6 +1,6 @@
 {
   "name": "koa-aliyun-monitor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A monitor middleware for koa integrated with koa-metrics and aliyun-monitor",
   "main": "index.js",
   "scripts": {
@@ -33,8 +33,8 @@
     "supertest": "^3.0.0"
   },
   "dependencies": {
-    "aliyun-monitor": "^1.0.2",
+    "aliyun-monitor": "1.0.x",
     "arguejs": "^0.2.3",
-    "koa-metrics": "^1.0.0"
+    "koa-metrics": "1.0.x"
   }
 }
