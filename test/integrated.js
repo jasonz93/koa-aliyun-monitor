@@ -23,6 +23,7 @@ describe('Test koa-metrics integrated with aliyun-monitor', () => {
         monitor.on('report', (payload) => {
             expect(payload.length).to.be.equal(1);
             expect(payload[0].value).to.be.equal(responseTime);
+            monitor.removeAllListeners();
             done();
         });
         request(app.listen()).get('/test/monitor').end((err, res) => {
@@ -39,6 +40,7 @@ describe('Test koa-metrics integrated with aliyun-monitor', () => {
         monitor.on('report', (payload) => {
             expect(payload.length).to.be.equal(1);
             expect(payload[0].value).to.be.equal(1);
+            monitor.removeAllListeners();
             done();
         });
         request(app.listen()).get('/test/monitor').end((err, res) => {
